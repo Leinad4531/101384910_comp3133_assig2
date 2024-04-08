@@ -1,27 +1,19 @@
-# 101331074Comp3133Assig2
+# 101384910_comp3133_assig2 - Angular Frontend Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+This project is developed as part of the coursework for COMP 3133 at George Brown College. It's an Angular-based frontend application that interfaces with a GraphQL backend, showcasing a full-fledged application with authentication, session management, and dynamic data presentation.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js (LTS version recommended)
+- Angular CLI: Install it globally using `npm install -g @angular/cli`
+- Git
 
-## Build
+### Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Leinad4531/101384910_comp3133_assig2.git
