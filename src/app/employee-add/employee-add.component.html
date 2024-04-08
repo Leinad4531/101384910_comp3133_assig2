@@ -1,0 +1,42 @@
+<div class="sw_wrapper">
+    <div class="sw_panel sw_panel-outline sw_wd-60 sw_mlr-auto sw_mtb-5">
+        <div class="sw_panel-wrapper">
+            <div [ngClass]="{'sw_notification': true, 'bg-warning': !addEmployeeSuccess, 'bg-success': addEmployeeSuccess}">
+                <div *ngIf="addEmployeeSuccess; else validationErrors" class="st-white">Employee added successful!</div>
+                <div *ngIf="!addEmployeeSuccess" class="st-white">Please fill out all fields.</div>
+                <ng-template #validationErrors>
+                    <div *ngIf="submitted && (!employee.first_name || !employee.last_name || !employee.email || !employee.gender || !employee.salary)" class="st-white">Please fill out all fields.</div>
+                </ng-template>
+            </div>
+            <form class="sw_form" (ngSubmit)="create()">
+                <h2 class="sw_panel-title">ADD EMPLOYEE</h2>
+                <hr class="sw_hr" />
+                
+                <label for="first_name">First Name</label>
+                <input type="text" class="sw_form-input" id="first_name" [(ngModel)]="employee.first_name" name="first_name" required="required" />
+                
+                <label for="last_name">Last Name</label>
+                <input type="text" class="sw_form-input" id="last_name" [(ngModel)]="employee.last_name" name="last_name" required="required" />
+
+                <label for="email">Email</label>
+                <input type="email" class="sw_form-input" id="email" [(ngModel)]="employee.email" name="email" required="required" />
+
+                <label for="gender">Gender</label>
+                <select class="sw_form-input" id="gender" [(ngModel)]="employee.gender" name="gender" required="required">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Female</option>
+                </select>
+
+
+
+                <label for="salary">Salary</label>
+                <input type="text" class="sw_form-input" id="salary" [(ngModel)]="employee.salary" name="salary" required="required" />
+                
+                <button type="submit" class="sw_btn sw_rsq-1 sw_mr-2 bg-turquoise st-white">Save</button>
+                <button type="button" class="sw_btn sw_rsq-1 bg-error st-white">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

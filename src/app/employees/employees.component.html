@@ -1,0 +1,43 @@
+<div class="sw_wrapper">
+    <div class="sw_panel bg-none sw_wd-70 sw_mlr-auto sw_mtb-6">
+        <div class="sw_panel-wrapper">
+            <h1 class="st_align-center font_sw-2">Employees List</h1>
+            <a href="/employees/add" class="sw_btn bg-turquoise st-white sw_rsq-1">Add Employee</a>
+
+            <div class="sw_table-responsive sw_mtb-3">
+                <table class="sw_table sw_table-striped st_align-center" *ngIf="employees.length > 0; else noEmployees">
+                    <thead>
+                        <tr>
+                            <th>Employee First Name</th>
+                            <th>Employee Last Name</th>
+                            <th>Employee Email id</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+
+                        <tr *ngFor="let employee of employees">
+                            <td>{{ employee.first_name }}</td>
+                            <td>{{ employee.last_name }}</td>
+                            <td>{{ employee.email }}</td>
+                            <td>
+                              <a [routerLink]="['/employees/update', employee._id]" class="sw_btn sw_btn-small bg-success sw_rsq-1 st-white">UPDATE</a>
+                              <a href="" class="sw_btn sw_btn-small bg-error sw_rsq-1 st-white sw_mlr-1">DELETE</a>
+                              <a href="/employees/details" class="sw_btn sw_btn-small bg-success sw_rsq-1 st-white">VIEW</a>
+                            </td>
+                          </tr>
+                       
+                    </tbody>
+                    
+                </table>
+                <ng-template #noEmployees>
+                    <p>No employee yet</p>
+                  </ng-template>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
